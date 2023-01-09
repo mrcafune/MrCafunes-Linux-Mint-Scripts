@@ -35,8 +35,12 @@ sudo apt-get install mono-complete
 echo "Open VS Code, and install the C# Extension (ms-dotnettools-csharp)"
 echo 'Installation Complete.'
 echo "Running the mono-install.sh file that is in the same directory as this script."
-echo "Install will begin in 10 seconds.  Follow these directions when that's complete to setup visual code"
+
 echo 'Open up settings via File menu -> Preferences -> Settings (or Ctrl+, (control comma)) and search for “Omnisharp: Use Global Mono“, then set its value to “always”. Click “Restart Omnisharp” from the notification that appears at the bottom-right. You can also restart Omnisharp at any time by pressing Ctrl+Shift+P and selecting “OmniSharp: Restart OmniSharp”.'
 sleep 11
-echo "Running next script"
+echo "Downloading DotNet SDK installer for Ubuntu"
+wget https://dot.net/v1/dotnet-install.sh -O dotnet-install.sh
+sleep 2
+echo "Making the script executable & installing .net"
+sudo chmod +x dotnet-install.sh
 sudo sh dotnet-install.sh

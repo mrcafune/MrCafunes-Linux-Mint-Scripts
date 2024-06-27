@@ -12,7 +12,7 @@ trap 'handle_error $LINENO' ERR
 
 install_packages() {
     echo "Updating package list and installing required packages..."
-    sudo apt-get update && sudo apt-get install -y build-essential openssh-server clang libssl-dev libxrandr-dev libxxf86vm-dev libopenal-dev libgl1-mesa-dev libglu1-mesa-dev zlib1g-dev libcurl4-openssl-dev ffmpeg libfuse2 curl nproc
+    sudo apt-get update && sudo apt-get install -y build-essential openssh-server clang libssl-dev libxrandr-dev libxxf86vm-dev libopenal-dev libgl1-mesa-dev libglu1-mesa-dev zlib1g-dev libcurl4-openssl-dev ffmpeg libfuse2 curl
 }
 
 create_steam_runtime_directory() {
